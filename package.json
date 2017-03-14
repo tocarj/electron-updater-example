@@ -1,9 +1,14 @@
 {
   "name": "electron-updater-example",
-  "version": "0.3.6",
+  "version": "0.3.8",
   "main": "main.js",
   "description": "electron-updater example project",
   "author": "Matt Haggard",
+  "scripts": {
+    "start": "electron .",
+    "pack": "build --dir",
+    "dist": "build"
+  },
   "devDependencies": {
     "electron": "^1.4.15",
     "electron-builder": "^12.3.1"
@@ -20,9 +25,14 @@
         "zip",
         "dmg"
       ]
+     
     },
     "nsis": {
       "perMachine": true
-    }
+    }, "publish": [{
+            "provider": "github",
+            "owner": "tocarj",
+            "repo": "electron-updater-example"
+        }]
   }
 }
